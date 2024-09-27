@@ -4,6 +4,7 @@ This document outlines the technologies and libraries utilized in the project, c
 
 ### Base Technologies
 
+- Tailwind: For css classNames used in the project
 - TypeScript: A superset of JavaScript that adds static typing for better development experiences.
 - React: A JavaScript library for building user interfaces, particularly single-page applications.
 - Vite: A fast build tool and development server for modern web projects.
