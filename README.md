@@ -103,4 +103,45 @@ The project is organized into a well-defined directory structure to enhance main
 
 - rtl.css: Styles specifically configured for right-to-left (RTL) layouts, ensuring support for languages that require this orientation.
 
----
+<br/>
+<br/>
+
+# Running the Application
+
+To run the application, you'll need to use Yarn, a package manager that simplifies the installation and management of project dependencies. Follow these steps to get the app up and running:
+
+### Prerequisites
+
+1. Node.js: Ensure that you have Node.js installed on your machine. You can download it from [nodejs.org](https://nodejs.org/).
+2. Yarn: If you haven't installed Yarn yet, you can do so by running:
+
+   npm install --global yarn
+
+### Steps to Run the App
+
+1. Clone the Repository: If you haven't already cloned the repository, do so using:
+
+   git clone <repository-url>
+   cd <repository-directory>
+
+2. Install Dependencies: Navigate to the project directory and install the required dependencies:
+
+   yarn install
+
+3. Start the Development Server: Once the dependencies are installed, you can start the application in development by running:
+
+   yarn run dev
+
+4. Access the Application: Open your web browser and navigate to http://localhost:5173
+
+### Additional Commands
+
+- Build for Production: To create an optimized build for production, run:
+
+  yarn build
+
+- Run Tests: If you have tests set up, you can execute them with:
+
+  yarn test
+
+Following these steps will allow you to successfully run and interact with the application in a local development environment.
