@@ -1,0 +1,17 @@
+[dir='rtl'] {
+    select {
+        background-position: left .5rem center;
+    }
+
+    .tom-select.ts-wrapper .ts-control, .tom-select.plugin-dropdown_input.focus.dropdown-active .ts-control {
+        padding: .5rem .75rem !important;
+    }
+
+    .tns-outer {
+        direction: ltr;
+
+        .tns-item {
+            direction: rtl;
+        }
+    }
+}
