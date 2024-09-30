@@ -4,7 +4,7 @@ import Hurricane from "../themes/Hurricane";
 import Ravage from "../themes/Ravage";
 import Echo from "../themes/Echo";
 import Hook from "../themes/Hook";
-import Razor from "../themes/Razor";
+import Parviz from "../themes/Parviz";
 import Havoc from "../themes/Havoc";
 import Dagger from "../themes/Dagger";
 import Shuriken from "../themes/Shuriken";
@@ -30,8 +30,8 @@ export const themes = [
   //   component: Hook,
   // },
   {
-    name: "razor",
-    component: Razor,
+    name: "parviz",
+    component: Parviz,
   },
   // {
   //   name: "havoc",
@@ -96,7 +96,7 @@ export const { setTheme } = themeSlice.actions;
 
 export const selectTheme = (state: RootState) => {
   if (localStorage.getItem("theme") === null) {
-    localStorage.setItem("theme", "razor");
+    localStorage.setItem("theme", "parviz");
   }
 
   return state.theme.value;

@@ -201,7 +201,7 @@ const slideDown = (
 
 const themeLocalisition = (themeName: string) => {
   switch (themeName) {
-    case "razor":
+    case "parviz":
       return "پرویز";
     default:
       return "";

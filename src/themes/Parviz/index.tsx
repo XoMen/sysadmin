@@ -1,5 +1,5 @@
 import "@/assets/css/vendors/simplebar.css";
-import "@/assets/css/themes/razor.css";
+import "@/assets/css/themes/parviz.css";
 import { Transition } from "react-transition-group";
 import Breadcrumb from "@/components/Base/Breadcrumb";
 import { useState, useEffect, createRef } from "react";
@@ -77,7 +77,7 @@ function Main() {
   return (
     <div
       className={clsx([
-        "razor background min-h-screen",
+        "parviz background min-h-screen",
         "before:content-[''] before:bg-gradient-to-b before:from-slate-100 before:to-slate-50 before:h-screen before:w-full before:fixed before:top-0",
         "after:content-[''] after:fixed after:inset-0 after:bg-[radial-gradient(rgb(0_0_0_/_10%)_1px,_transparent_0)] after:bg-[length:25px_25px]",
       ])}
