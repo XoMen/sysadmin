@@ -20,6 +20,7 @@ import QuickSearch from "@/components/QuickSearch";
 import SwitchAccount from "@/components/SwitchAccount";
 import NotificationsPanel from "@/components/NotificationsPanel";
 import ActivitiesPanel from "@/components/ActivitiesPanel";
+import ExpandButton from "@/components/ExpandButton";
 
 function Main() {
   const dispatch = useAppDispatch();
@@ -54,12 +55,6 @@ function Main() {
     }
   };
 
-  const requestFullscreen = () => {
-    const el = document.documentElement;
-    if (el.requestFullscreen) {
-      el.requestFullscreen();
-    }
-  };
 
   useEffect(() => {
     if (scrollableRef.current) {
@@ -406,16 +401,7 @@ function Main() {
                   {/* <a href="" className="p-2 rounded-full hover:bg-slate-100">
                     <Lucide icon="Moon" className="w-[18px] h-[18px]" />
                   </a> */}
-                  <a
-                    href=""
-                    className="p-2 rounded-full hover:bg-slate-100"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      requestFullscreen();
-                    }}
-                  >
-                    <Lucide icon="Expand" className="w-[18px] h-[18px]" />
-                  </a>
+                  <ExpandButton />
                   <a
                     href=""
                     className="p-2 rounded-full hover:bg-slate-100"
