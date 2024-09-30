@@ -199,6 +199,15 @@ const slideDown = (
   }, duration);
 };
 
+const themeLocalisition = (themeName: string) => {
+  switch (themeName) {
+    case "razor":
+      return "پرویز";
+    default:
+      return "";
+  }
+};
+
 export {
   cutText,
   formatDate,
@@ -214,4 +223,5 @@ export {
   stringToHTML,
   slideUp,
   slideDown,
+  themeLocalisition,
 };

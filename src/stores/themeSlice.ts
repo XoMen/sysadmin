@@ -13,50 +13,50 @@ import Exort from "../themes/Exort";
 import Viper from "../themes/Viper";
 
 export const themes = [
-  {
-    name: "echo",
-    component: Echo,
-  },
-  {
-    name: "hurricane",
-    component: Hurricane,
-  },
-  {
-    name: "ravage",
-    component: Ravage,
-  },
-  {
-    name: "hook",
-    component: Hook,
-  },
+  // {
+  //   name: "echo",
+  //   component: Echo,
+  // },
+  // {
+  //   name: "hurricane",
+  //   component: Hurricane,
+  // },
+  // {
+  //   name: "ravage",
+  //   component: Ravage,
+  // },
+  // {
+  //   name: "hook",
+  //   component: Hook,
+  // },
   {
     name: "razor",
     component: Razor,
   },
-  {
-    name: "havoc",
-    component: Havoc,
-  },
-  {
-    name: "dagger",
-    component: Dagger,
-  },
-  {
-    name: "shuriken",
-    component: Shuriken,
-  },
-  {
-    name: "raze",
-    component: Raze,
-  },
-  {
-    name: "exort",
-    component: Exort,
-  },
-  {
-    name: "viper",
-    component: Viper,
-  },
+  // {
+  //   name: "havoc",
+  //   component: Havoc,
+  // },
+  // {
+  //   name: "dagger",
+  //   component: Dagger,
+  // },
+  // {
+  //   name: "shuriken",
+  //   component: Shuriken,
+  // },
+  // {
+  //   name: "raze",
+  //   component: Raze,
+  // },
+  // {
+  //   name: "exort",
+  //   component: Exort,
+  // },
+  // {
+  //   name: "viper",
+  //   component: Viper,
+  // },
 ] as const;
 
 export type Themes = (typeof themes)[number];
@@ -83,7 +83,10 @@ export const themeSlice = createSlice({
   name: "theme",
   initialState,
   reducers: {
-    setTheme: (state: { value: any; }, action: PayloadAction<Themes["name"]>) => {
+    setTheme: (
+      state: { value: any },
+      action: PayloadAction<Themes["name"]>
+    ) => {
       state.value = action.payload;
     },
   },
@@ -93,7 +96,7 @@ export const { setTheme } = themeSlice.actions;
 
 export const selectTheme = (state: RootState) => {
   if (localStorage.getItem("theme") === null) {
-    localStorage.setItem("theme", "echo");
+    localStorage.setItem("theme", "razor");
   }
 
   return state.theme.value;

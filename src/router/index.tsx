@@ -59,6 +59,7 @@ import Chart from "../pages/Chart";
 import Slider from "../pages/Slider";
 import ImageZoom from "../pages/ImageZoom";
 import LandingPage from "../pages/LandingPage";
+import SettingsPanel from "@/pages/SettingsPanel";
 
 import Layout from "../themes";
 
@@ -71,6 +72,10 @@ function Router() {
         {
           path: "/",
           element: <DashboardOverview1 />,
+        },
+        {
+          path: "settings-panel",
+          element: <SettingsPanel />,
         },
         {
           path: "dashboard-overview-2",
