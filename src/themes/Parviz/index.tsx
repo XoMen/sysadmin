@@ -21,6 +21,7 @@ import SwitchAccount from "@/components/SwitchAccount";
 import NotificationsPanel from "@/components/NotificationsPanel";
 import ActivitiesPanel from "@/components/ActivitiesPanel";
 import ExpandButton from "@/components/ExpandButton";
+import BreadcrumbsMenu from "@/components/BreadcrumbsMenu";
 
 function Main() {
   const dispatch = useAppDispatch();
@@ -54,7 +55,6 @@ function Main() {
       setCompactMenu(true);
     }
   };
-
 
   useEffect(() => {
     if (scrollableRef.current) {
@@ -361,13 +361,7 @@ function Main() {
                 </a>
               </div>
               {/* BEGIN: Breadcrumb */}
-              <Breadcrumb className="flex-1 hidden xl:block">
-                <Breadcrumb.Link to="/">App</Breadcrumb.Link>
-                <Breadcrumb.Link to="/">Dashboards</Breadcrumb.Link>
-                <Breadcrumb.Link to="/" active={true}>
-                  Analytics
-                </Breadcrumb.Link>
-              </Breadcrumb>
+              <BreadcrumbsMenu />
               {/* END: Breadcrumb */}
               {/* BEGIN: Search */}
               <div

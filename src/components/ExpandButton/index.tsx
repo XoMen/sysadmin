@@ -3,24 +3,35 @@ import Lucide from "../Base/Lucide";
 
 const ExpandButton = () => {
   const [isMinimized, setIsMinimized] = useState<boolean>(false);
+
   const requestFullscreen = () => {
     const el = document.documentElement;
     if (el.requestFullscreen && !document.fullscreenElement) {
       try {
         el.requestFullscreen();
-        setIsMinimized(true);
       } catch (error) {
         console.error("Enter Fullscreen Error:", error);
       }
     } else {
       try {
         document.exitFullscreen();
-        setIsMinimized(false);
       } catch (error) {
         console.error("Exit Fullscreen Error:", error);
       }
     }
   };
+
+  useEffect(() => {
+    const handleFullscreenChange = () => {
+      setIsMinimized(!!document.fullscreenElement);
+    };
+
+    document.addEventListener("fullscreenchange", handleFullscreenChange);
+
+    return () => {
+      document.removeEventListener("fullscreenchange", handleFullscreenChange);
+    };
+  }, []);
 
   return (
     <a
