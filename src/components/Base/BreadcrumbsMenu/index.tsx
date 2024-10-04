@@ -1,5 +1,5 @@
 import { useLocation } from "react-router-dom";
-import Breadcrumb from "../Base/Breadcrumb";
+import Breadcrumb from "../Breadcrumb";
 import { useAppSelector } from "@/stores/hooks";
 import { selectSideMenu } from "@/stores/sideMenuSlice";
 

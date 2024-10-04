@@ -21,7 +21,7 @@ import SwitchAccount from "@/components/SwitchAccount";
 import NotificationsPanel from "@/components/NotificationsPanel";
 import ActivitiesPanel from "@/components/ActivitiesPanel";
 import ExpandButton from "@/components/ExpandButton";
-import BreadcrumbsMenu from "@/components/BreadcrumbsMenu";
+import BreadcrumbsMenu from "@/components/Base/BreadcrumbsMenu";
 
 function Main() {
   const dispatch = useAppDispatch();
