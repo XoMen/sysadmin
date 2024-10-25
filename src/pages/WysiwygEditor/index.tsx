@@ -10,6 +10,7 @@ import {
 } from "@/components/Base/PreviewComponent";
 import { ClassicEditor } from "@/components/Base/Ckeditor";
 import { FormSwitch } from "@/components/Base/Form";
+import LexicalEditorWrapper from "@/components/Base/LexicalEditorWrapper";
 
 function Main() {
   const [editorData, setEditorData] = useState("<p>Content of the editor.</p>");
@@ -25,78 +26,17 @@ function Main() {
             •
           </div>
           <div className="group-[.mode--light]:text-white/80 text-slate-500 leading-relaxed hidden lg:block">
-            قدرت مؤلفه ویرایشگر WYSIWYG ما را برای ایجاد
-            و محتوای تعاملی در برنامه‌های وب خود کشف کنید.
+            قدرت مؤلفه ویرایشگر WYSIWYG ما را برای ایجاد و محتوای تعاملی در
+            برنامه‌های وب خود کشف کنید.
           </div>
         </div>
         <div className="mt-3.5 grid grid-cols-12 xl:grid-cols-10 gap-y-7 lg:gap-y-10 gap-x-6">
           <div className="relative flex flex-col col-span-12 lg:col-span-9 xl:col-span-8 gap-y-7">
             <div className="flex flex-col p-5 box box--stacked">
-              <PreviewComponent>
-                {({ toggle }) => (
-                  <>
-                    <div className="flex flex-col pb-5 mb-5 border-b border-dashed sm:items-center sm:flex-row border-slate-300/70">
-                      <div className="text-[0.94rem] font-medium">CKEditor</div>
-                      <FormSwitch className="w-full mt-3 sm:w-auto sm:ms-auto sm:mt-0">
-                        <FormSwitch.Label
-                          htmlFor="show-example-1"
-                          className="ms-0 sm:ms-2"
-                        >
-                          نمایش کد نمونه
-                        </FormSwitch.Label>
-                        <FormSwitch.Input
-                          id="show-example-1"
-                          onClick={toggle}
-                          className="ms-3 me-0"
-                          type="checkbox"
-                        />
-                      </FormSwitch>
-                    </div>
-                    <div>
-                      <p className="leading-relaxed">
-                        مؤلفه "ویرایشگر متن Wysiwyg CKEditor" یک متن غنی
-                        برای برنامه وب شما ارائه می‌دهد که به کاربران اجازه می‌دهد تا
-                        محتوا را به راحتی ایجاد و ویرایش کنند. این
-                        بخش نشان می‌دهد که چگونه CKEditor را به
-                        برنامه خود یکپارچه کنید و برای ویرایش متن استفاده کنید.
-                      </p>
-                      <div className="border rounded-[0.6rem] dark:border-darkmode-400 relative mt-7 mb-4 border-slate-200/80">
-                        <div className="absolute start-0 px-3 ms-4 -mt-2 text-xs uppercase bg-white text-slate-500">
-                          <div className="-mt-px">Example code / preview</div>
-                        </div>
-                        <div className="px-5 py-2 mt-4 flex flex-col gap-3.5">
-                          <Preview>
-                            <ClassicEditor
-                              value={editorData}
-                              onChange={setEditorData}
-                            />
-                          </Preview>
-                          <Source>
-                            <Highlight>
-                              {`
-              <ClassicEditor
-                value={editorData}
+              <LexicalEditorWrapper
+                // value={editorData}
                 onChange={setEditorData}
               />
-              `}
-                            </Highlight>
-                          </Source>
-                        </div>
-                      </div>
-                      <p className="leading-relaxed">
-                        مؤلفه "ویرایشگر متن Wysiwyg CKEditor" وب شما را بهبود می‌بخشد
-                        با ارائه یک ویرایشگر متن قدرتمند و کاربرپسند
-                        متن غنی. کاربران می‌توانند ایجاد، فرمت‌بندی و ویرایش کنند
-                        محتوا را به صورت بی‌درز و به سرعت. ظاهر CKEditor را سفارشی کنید
-                        و رفتار آن را برای تأمین نیازهای برنامه‌تان تنظیم کنید و
-                        محتوای ویرایش شده را به عنوان مورد نیاز بازیابی کنید. با CKEditor،
-                        می‌توانید کاربران را برای ایجاد و مدیریت متن غنی قدرت بخشید
-                        بدون دغدغه.
-                      </p>
-                    </div>
-                  </>
-                )}
-              </PreviewComponent>
             </div>
             <div className="flex flex-col p-5 box box--stacked">
               <div className="flex flex-col pb-5 mb-5 border-b border-dashed sm:items-center sm:flex-row border-slate-300/70">
@@ -104,14 +44,14 @@ function Main() {
               </div>
               <div>
                 <p className="leading-relaxed">
-                  در این بخش، اطلاعات جزئی در مورد
-                  ویژگی‌ها، کلاس‌ها و گزینه‌های موجود که می‌توانید با
-                  اجزاء است. درک این خصوصیات برای
-                  سفارشی کردن و پیکربندی اجزاء برای مطابقت با
-                  نیازهای خاص شما ضروری است.
+                  در این بخش، اطلاعات جزئی در مورد ویژگی‌ها، کلاس‌ها و گزینه‌های
+                  موجود که می‌توانید با اجزاء است. درک این خصوصیات برای سفارشی
+                  کردن و پیکربندی اجزاء برای مطابقت با نیازهای خاص شما ضروری
+                  است.
                 </p>
                 <p className="mt-2 leading-relaxed">
-                  در زیر لیستی از ویژگی‌هایی که می‌توان به اجزاء منتقل کرد، آمده است:
+                  در زیر لیستی از ویژگی‌هایی که می‌توان به اجزاء منتقل کرد، آمده
+                  است:
                 </p>
                 <div className="border rounded-[0.6rem] dark:border-darkmode-400 relative mt-7 mb-4 border-slate-200/80">
                   <div className="absolute start-0 px-3 ms-4 -mt-2.5 font-medium bg-white text-slate-500">
@@ -137,8 +77,7 @@ function Main() {
                           <Table.Td>`as`</Table.Td>
                           <Table.Td>`string`</Table.Td>
                           <Table.Td>
-                            نوع المان HTML برای رندر کردن. به طور پیش فرض
-                            "div".
+                            نوع المان HTML برای رندر کردن. به طور پیش فرض "div".
                           </Table.Td>
                         </Table.Tr>
                         <Table.Tr>
@@ -173,24 +112,22 @@ function Main() {
                           <Table.Td>`onFocus`</Table.Td>
                           <Table.Td>`(value: string) =&gt; void`</Table.Td>
                           <Table.Td>
-                            تابع بازخوانی برای رسیدگی به تمرکز ویرایشگر
-                            event.
+                            تابع بازخوانی برای رسیدگی به تمرکز ویرایشگر event.
                           </Table.Td>
                         </Table.Tr>
                         <Table.Tr>
                           <Table.Td>`onBlur`</Table.Td>
                           <Table.Td>`(value: string) =&gt; void`</Table.Td>
                           <Table.Td>
-                            تابع بازخوانی برای رسیدگی به تاریکی ویرایشگر
-                            event.
+                            تابع بازخوانی برای رسیدگی به تاریکی ویرایشگر event.
                           </Table.Td>
                         </Table.Tr>
                         <Table.Tr>
                           <Table.Td>`onReady`</Table.Td>
                           <Table.Td>`(value: string) =&gt; void`</Table.Td>
                           <Table.Td>
-                            تابع بازخوانی که هنگامی که CKEditor
-                            آماده است فراخوانی می‌شود.
+                            تابع بازخوانی که هنگامی که CKEditor آماده است
+                            فراخوانی می‌شود.
                           </Table.Td>
                         </Table.Tr>
                         <Table.Tr>

@@ -226,23 +226,23 @@ const initialState: SideMenuState = {
     //   pathname: "/add-product",
     //   title: "افزودن محصول",
     // },
-    // {
-    //   icon: "Table2",
-    //   pathname: "/products",
-    //   title: "محصولات",
-    //   subMenu: [
-    //     {
-    //       icon: "LayoutPanelTop",
-    //       pathname: "/product-list",
-    //       title: "لیست محصول",
-    //     },
-    //     {
-    //       icon: "LayoutPanelLeft",
-    //       pathname: "/product-grid",
-    //       title: "شبکه محصول",
-    //     },
-    //   ],
-    // },
+    {
+      icon: "Table2",
+      pathname: "/services",
+      title: "سرویس‌ها",
+      subMenu: [
+        // {
+        //   icon: "LayoutPanelTop",
+        //   pathname: "/service-list",
+        //   title: "لیست سرویس",
+        // },
+        {
+          icon: "LayoutPanelTop",
+          pathname: "/service-grid",
+          title: "لیست سرویس",
+        },
+      ],
+    },
     // {
     //   icon: "SigmaSquare",
     //   pathname: "/transactions",
@@ -401,11 +401,11 @@ const initialState: SideMenuState = {
     //   pathname: "/file-upload",
     //   title: "بارگذاری فایل",
     // },
-    // {
-    //   icon: "HopOff",
-    //   pathname: "/wysiwyg-editor",
-    //   title: "ویرایشگر Wysiwyg",
-    // },
+    {
+      icon: "HopOff",
+      pathname: "/wysiwyg-editor",
+      title: "ویرایشگر Wysiwyg",
+    },
     // {
     //   icon: "ClipboardType",
     //   pathname: "/validation",

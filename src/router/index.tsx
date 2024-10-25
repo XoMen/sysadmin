@@ -142,11 +142,11 @@ function Router() {
           element: <AddProduct />,
         },
         {
-          path: "product-list",
+          path: "service-list",
           element: <ProductList />,
         },
         {
-          path: "product-grid",
+          path: "service-grid",
           element: <ProductGrid />,
         },
         {
